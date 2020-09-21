@@ -1,1 +1,1 @@
-# bash_startup_script
+## Startup script for a GCE Challenge Lab
