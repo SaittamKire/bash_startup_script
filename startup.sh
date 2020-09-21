@@ -4,6 +4,7 @@
 # Echo commands as they are run, to make debugging easier.
 # GCE startup script output shows up in "/var/log/syslog" .
 #
+cd /home/
 sudo set -x
 
 
@@ -46,7 +47,7 @@ worker_log_bucket=$(curl -H "Metadata-Flavor: Google" "${log_bucket_metadata_url
 
 # We write a file named after this machine.
 worker_log_file="machine-$(hostname)-finished.txt"
-echo "Phew!  Work completed at $(date)" >"${worker_log_file}"
+sudo echo "Phew!  Work completed at $(date)" >"${worker_log_file}"
 
 # And we copy that file to the bucket specified in the metadata.
 echo "Copying the log file to the bucket..."
