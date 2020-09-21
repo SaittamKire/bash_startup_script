@@ -27,6 +27,9 @@ sudo apt-get -yq upgrade
 #
 curl -sSO https://dl.google.com/cloudagents/add-monitoring-agent-repo.sh
 sudo yes | bash add-monitoring-agent-repo.sh
+sudo apt-get update
+sudo apt-get install stackdriver-agent
+sudo service stackdriver-agent start
 
 
 #
